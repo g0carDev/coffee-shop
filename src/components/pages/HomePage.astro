@@ -1,0 +1,70 @@
+<section class='home' id='home'>
+	<div class='home__container container'>
+		<div class='home__content'>
+			<span class='home__subtitle'>Welcome To Coffero!</span>
+			<h1 class='home__title'>Discover Amazing Coffee House & Get Energy</h1>
+			<p class='home__description'>
+				There are many variations of passages available but the majority have suffered alteration in some form by
+				injected humour or randomised words.
+			</p>
+
+			<div class='home__btns'>
+				<a href='#menu' class='btn'> Check Menu</a>
+
+				<a href='#reservation' class='btn home__btn'> Book Table</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.home {
+		background: center / cover url(../../assets/home-bg.png);
+		min-height: calc(100vh + var(--header-height));
+		display: flex;
+		align-items: center;
+	}
+
+	.home__container {
+		width: 100%;
+	}
+
+	.home__content {
+		max-width: 660px;
+	}
+
+	.home__subtitle,
+	.home__description {
+		color: var(--title-color);
+	}
+
+	.home__subtitle {
+		font-family: var(--second-font);
+		font-size: var(--h1-font-size);
+		font-weight: var(--weight-500);
+	}
+
+	.home__title {
+		font-size: var(--biggest-font-size);
+		font-weight: var(--weight-700);
+		margin-block: 1.25rem;
+	}
+
+	.home__description {
+		margin-bottom: 2.25rem;
+	}
+
+	.home__btns {
+		display: flex;
+		column-gap: 2rem;
+	}
+
+	.home__btn {
+		background-color: transparent;
+	}
+
+	.home__btn:hover {
+		background-color: var(--first-color);
+		color: var(--title-color);
+	}
+</style>

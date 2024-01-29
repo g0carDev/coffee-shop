@@ -1,0 +1,103 @@
+<section class='choose section'>
+	<div class='choose__grid container grid'>
+		<div class='choose__content'>
+			<h2 class='section__title title-left' data-title='Why Choose Us'>
+				Coffero Most Out Of Your Favorite & Tasty Coffee House
+			</h2>
+
+			<p class='choose__description'>
+				There are many variations of passages of orem psum available but the majority have suffered alteration in some
+				form by injected humour or randomised words which don't look even slightly believable.
+			</p>
+
+			<div class='choose__details grid'>
+				<div class='choose__details-item'>
+					<div class='choose__details-img-wrapper'>
+						<img src={'/assets/coffee-mug.svg'} alt='Coffee Mug' class='choose__details-img' />
+					</div>
+
+					<div>
+						<h3 class='choose__details-title'>Awesome Aroma</h3>
+						<p class='choose__details-description'>
+							There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration
+							in some injected.
+						</p>
+					</div>
+				</div>
+
+				<div class='choose__details-item'>
+					<div class='choose__details-img-wrapper'>
+						<img src={'/assets/coffee-beans-2.svg'} alt='Coffee Beans' class='choose__details-img' />
+					</div>
+
+					<div>
+						<h3 class='choose__details-title'>Pure Grades</h3>
+						<p class='choose__details-description'>
+							There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration
+							in some injected.
+						</p>
+					</div>
+				</div>
+
+				<div class='choose__details-item'>
+					<div class='choose__details-img-wrapper'>
+						<img src={'/assets/coffee-beans-3.svg'} alt='Coffee Beans' class='choose__details-img' />
+					</div>
+
+					<div>
+						<h3 class='choose__details-title'>Healthy Coffee</h3>
+						<p class='choose__details-description'>
+							There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration
+							in some injected.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<img src={'/assets/choose.jpg'} alt='' class='choose__img' />
+	</div>
+</section>
+
+<style>
+	.choose__grid {
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+	}
+
+	.choose__description {
+		margin-bottom: 3rem;
+	}
+
+	.choose__details {
+		row-gap: 2rem;
+	}
+
+	.choose__details-item {
+		display: flex;
+		align-items: start;
+		column-gap: 1.25rem;
+	}
+
+	.choose__details-img-wrapper {
+		border: 2px dashed var(--title-color);
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		display: grid;
+		place-items: center;
+	}
+
+	.choose__details-img {
+		width: 36px;
+	}
+
+	.choose__details-item div:last-child {
+		width: calc(100% - 80px);
+	}
+
+	.choose__details-title {
+		font-size: var(--largest-font-size);
+		margin-bottom: 0.5rem;
+	}
+</style>

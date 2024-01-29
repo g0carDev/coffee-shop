@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {
+	//pages
+	HomePage,
+	AboutPage,
+	FeaturesPage,
+	MenuPage,
+	TeamPage,
+	TestimonialsPage,
+	Choose,
+	Stats,
+	Gallery,
+	Offer,
+	Reservation,
+} from '../components';
+import '../styles/index.css';
+---
+
+<Layout title='Coffee Shop'>
+	<main>
+		<HomePage />
+		<AboutPage />
+		<FeaturesPage />
+		<MenuPage />
+		<Choose />
+		<Stats />
+		<Gallery />
+		<Offer  client:visible />
+		<TeamPage />
+		<Reservation />
+		<TestimonialsPage client:visible />
+	</main>
+</Layout>
+
+<style></style>

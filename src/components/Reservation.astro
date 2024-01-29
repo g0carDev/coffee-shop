@@ -1,0 +1,113 @@
+---
+import { FaRegBookmark } from 'react-icons/fa';
+---
+
+<section class='reservation container' id='reservation'>
+	<h2 class='section__title' data-title='Reservation'>Book A Table</h2>
+
+	<form class='reservation__form grid'>
+		<div class='form__input-div'>
+			<input type='text' placeholder='Your Name' class='form__input' />
+		</div>
+
+		<div class='form__input-div'>
+			<input type='email' placeholder='Email Address' class='form__input' />
+		</div>
+
+		<div class='form__input-div'>
+			<input type='text' placeholder='Your Phone' class='form__input' />
+		</div>
+
+		<div class='form__input-div'>
+			<input type='text' placeholder='Date Ex: DD/MM/YY' class='form__input' />
+		</div>
+
+		<div class='form__input-div'>
+			<input type='text' placeholder='Time Ex: 01:25PM' class='form__input' />
+		</div>
+
+		<div class='form__input-div'>
+			<input type='text' placeholder='Number Of People' class='form__input' />
+		</div>
+
+		<div class='form__input-div form__input-textarea'>
+			<textarea class='form__input' placeholder='Your Message'></textarea>
+		</div>
+
+		<button class='btn btn--flex reservation__btn'>
+			<FaRegBookmark /> Book A Table
+		</button>
+	</form>
+
+	<img src={'/assets/shape-2.png'} alt='Shape' class='shape__two' />
+	<img src={'/assets/shape-3.png'} alt='Shape' class='shape__three' />
+</section>
+
+<style>
+	.reservation {
+		background: var(--container-color);
+		padding: 2.5rem;
+	}
+
+	.reservation,
+	.reservation .section__title,
+	.reservation__form {
+		position: relative;
+	}
+
+	.reservation .section__title,
+	.reservation__form {
+		z-index: 10;
+	}
+
+	.reservation__form {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.form__input-textarea,
+	.reservation__btn {
+		grid-column: 1/-1;
+	}
+
+	.reservation,
+	.form__input {
+		border-radius: var(--radius);
+	}
+
+	.form__input {
+		width: 100%;
+		color: var(--title-color);
+		background: var(--bg-color);
+		border: 1px solid var(--first-color-light);
+		padding: 1rem 1.25rem;
+	}
+
+	.form__input::placeholder {
+		color: var(--first-color-light);
+	}
+
+	.form__input-textarea .form__input {
+		height: 128px;
+		resize: none;
+	}
+
+	.reservation__btn {
+		justify-self: center;
+	}
+
+	.shape__two,
+	.shape__three {
+		position: absolute;
+		width: 180px;
+	}
+
+	.shape__two {
+		right: 1.25rem;
+		top: 2.5rem;
+	}
+
+	.shape__three {
+		left: 1.25rem;
+		bottom: 0.25rem;
+	}
+</style>

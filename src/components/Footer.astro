@@ -1,0 +1,318 @@
+---
+import { FaRegEnvelope, FaCaretRight, FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { AiOutlinePhone } from 'react-icons/ai';
+import { MdOutlineLocationOn } from 'react-icons/md';
+---
+
+<footer class='footer'>
+	<div class='footer__grid container grid'>
+		<div class='footer__content'>
+			<a href='/' class='footer__logo'>
+				<img src={'/assets/logo.png'} alt='Logo' class='footer__logo-img' />
+			</a>
+
+			<p class='footer__description'>
+				We are many variations of passages available but the majority have suffered alteration in some form by injected
+				humour words which don't look even slightly believable.
+			</p>
+
+			<ul class='footer__contact'>
+				<li class='footer__contact-item'>
+					<AiOutlinePhone class='icon' /> +2 123 654 7898
+				</li>
+
+				<li class='footer__contact-item'>
+					<MdOutlineLocationOn class='icon' /> 25/B Milford Road, New York
+				</li>
+
+				<li class='footer__contact-item'>
+					<FaRegEnvelope class='icon' /> info@example.com
+				</li>
+			</ul>
+		</div>
+
+		<div class='footer__content'>
+			<h3 class='footer__title'>Quick Links</h3>
+
+			<ul class='footer__links'>
+				<li>
+					<a href='#about' class='footer__link'>
+						<FaCaretRight class='icon' />
+						 About Us
+					</a>
+				</li>
+
+				<li>
+					<a href='#menu' class='footer__link'>
+						<FaCaretRight class='icon' />
+						 Menu
+					</a>
+				</li>
+
+				<li>
+					<a href='#features' class='footer__link'>
+						<FaCaretRight class='icon' />
+						 Features
+					</a>
+				</li>
+
+				<li>
+					<a href='#gallery' class='footer__link'>
+						<FaCaretRight class='icon' />
+						 Gallery
+					</a>
+				</li>
+
+				<li>
+					<a href='#team' class='footer__link'>
+						<FaCaretRight class='icon' />
+						 Team
+					</a>
+				</li>
+
+				<li>
+					<a href='#reservation' class='footer__link'>
+						<FaCaretRight class='icon' />
+						 Resevation
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class='footer__content'>
+			<h3 class='footer__title'>Opening Hours</h3>
+
+			<div class='footer__opening-hour'>
+				<ul class='opening__hour-list'>
+					<li class='opening__hour-item'>
+						<span>Saturday:</span>
+						<span>09AM - 06PM</span>
+					</li>
+
+					<li class='opening__hour-item'>
+						<span>Monday:</span>
+						<span>09AM - 06PM</span>
+					</li>
+
+					<li class='opening__hour-item'>
+						<span>Tuesday:</span>
+						<span>09AM - 06PM</span>
+					</li>
+
+					<li class='opening__hour-item'>
+						<span>Wednesday:</span>
+						<span>09AM - 06PM</span>
+					</li>
+
+					<li class='opening__hour-item'>
+						<span>Thursday:</span>
+						<span>09AM - 06PM</span>
+					</li>
+
+					<li class='opening__hour-item'>
+						<span>Friday:</span>
+						<span>09AM - 06PM</span>
+					</li>
+
+					<li class='opening__hour-item'>
+						<span>Sunday:</span>
+						<span>Closed</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class='footer__content'>
+			<h3 class='footer__title'>Newsletter</h3>
+
+			<p class='footer__description'>Subscribe Our Newsletter To Get Latest Update And News</p>
+
+			<form class='subscribe__form'>
+				<input type='text' placeholder='Your Email' class='form__input subscribe__input' />
+				<button class='btn btn--flex subscribe__btn' type='submit'>
+					<FaRegEnvelope /> Subscribe Now
+				</button>
+			</form>
+
+			<div class='footer__socials'>
+				<h3 class='footer__social-follow'>Follow Us:</h3>
+
+				<div class='footer__social-links'>
+					<a href='/' class='footer__social-link'>
+						<FaFacebookF />
+					</a>
+
+					<a href='/' class='footer__social-link'>
+						<FaTwitter />
+					</a>
+
+					<a href='/' class='footer__social-link'>
+						<FaLinkedinIn />
+					</a>
+
+					<a href='/' class='footer__social-link'>
+						<FaYoutube />
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<p class='copyright-text'>
+		Created by <span> G0C4R with Astro</span> | Coffero
+	</p>
+</footer>
+
+<style>
+	.footer {
+		background: var(--container-color);
+	}
+
+	.footer__grid {
+		grid-template-columns: 4fr 2fr 3fr 3fr;
+		padding-block: 6.25rem 4.5rem;
+	}
+
+	.footer__title,
+	.footer__logo-img {
+		margin-bottom: 2rem;
+	}
+
+	.footer__logo-img {
+		width: 190px;
+	}
+
+	.footer__description {
+		margin-bottom: 1.25rem;
+	}
+
+	.footer__contact-item {
+		display: flex;
+		align-items: center;
+		column-gap: 0.75rem;
+		margin-bottom: 1rem;
+	}
+
+	.footer__contact-item .icon {
+		color: var(--first-color);
+		font-size: var(--larger-font-size);
+	}
+
+	.footer__title {
+		font-size: var(--h3-font-size);
+		letter-spacing: 1.5px;
+		padding-bottom: 1.25rem;
+		position: relative;
+	}
+
+	.footer__title::before,
+	.footer__title::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		height: 2px;
+		background-color: var(--first-color);
+	}
+
+	.footer__title::before {
+		width: 12px;
+		left: 0;
+	}
+
+	.footer__title::after {
+		width: 30px;
+		left: 1.125rem;
+	}
+
+	.footer__links,
+	.footer__link {
+		display: flex;
+	}
+
+	.footer__links {
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.footer__link {
+		color: var(--title-color);
+		align-items: center;
+		column-gap: 0.25rem;
+	}
+
+	.footer__link .icon {
+		color: var(--first-color);
+	}
+
+	.footer__opening-hour {
+		background: var(--bg-color);
+		padding: 2rem 1.5rem;
+		position: relative;
+	}
+
+	.footer__opening-hour::before {
+		content: '';
+		position: absolute;
+		inset: 0.5rem;
+		border: 2px dashed var(--first-color);
+	}
+
+	.opening__hour-item {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.opening__hour-item:not(:last-child) {
+		margin-bottom: 1.125rem;
+	}
+
+	.subscribe__input {
+		border: 2px solid var(--title-color);
+	}
+
+	.subscribe__input::placeholder {
+		color: var(--title-color);
+	}
+
+	.subscribe__btn {
+		width: 100%;
+		justify-content: center;
+		margin-top: 1.25rem;
+	}
+
+	.footer__social-follow {
+		font-size: var(--normal-font-size);
+		margin-block: 1.5rem 1rem;
+	}
+
+	.footer__social-links {
+		display: flex;
+		column-gap: 1rem;
+	}
+
+	.footer__social-link {
+		width: 38px;
+		height: 38px;
+		border-radius: 50%;
+		color: var(--title-color);
+		border: 2px solid var(--first-color);
+		display: grid;
+		place-items: center;
+		transition: 0.5s var(--transition);
+	}
+
+	.footer__social-link:hover {
+		background-color: var(--first-color);
+	}
+
+	.copyright-text {
+		padding-block: 1.25rem;
+		border-top: 2px dashed hsla(0, 0%, 100%, 0.1);
+		text-align: center;
+		color: var(--title-color);
+	}
+
+	.copyright-text span {
+		color: var(--first-color);
+	}
+</style>

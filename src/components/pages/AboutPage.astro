@@ -1,0 +1,87 @@
+---
+import { FiCheck } from 'react-icons/fi';
+---
+
+<section class='about section' id='about'>
+	<div class='about__grid container grid'>
+		<div class='about__img-wrapper'>
+			<img src={'/assets/about-img.jpg'} alt='About' class='about__img' />
+		</div>
+
+		<div class='about__content'>
+			<h2 class='section__title title-left' data-title='About Us'>
+				Fresh Quality And Organic Tasty Coffee House For You
+			</h2>
+
+			<p class='about__description'>
+				There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
+				some form, by injected humour, or randomised words which don't look even slightly believable.
+			</p>
+
+			<div class='about__details grid'>
+				<p class='about__details-description'>
+					<FiCheck />
+					 At vero eos et accusamus et iusto odio
+				</p>
+
+				<p class='about__details-description'>
+					<FiCheck />
+					 Established fact that a reader will be distracted
+				</p>
+
+				<p class='about__details-description'>
+					<FiCheck />
+					 Sed ut perspiciatis unde omnis iste natus sit
+				</p>
+			</div>
+
+			<a href='#team' class='btn'> Our Experts</a>
+		</div>
+	</div>
+</section>
+
+<style>
+	.about {
+		padding-bottom: 0;
+	}
+
+	.about__grid {
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		gap: 3rem;
+	}
+
+	.about__img-wrapper {
+		position: relative;
+		padding-left: 1.5rem;
+	}
+
+	.about__img-wrapper::before {
+		content: '';
+		position: absolute;
+		bottom: -1.125rem;
+		left: 0;
+		background-color: var(--first-color);
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+
+	.about__img {
+		width: 100%;
+	}
+
+	.about__details {
+		margin-block: 1.25rem 2.25rem;
+	}
+
+	.about__details-description {
+		display: flex;
+		align-items: center;
+	}
+
+	.about__details,
+	.about__details-description {
+		gap: 0.625rem;
+	}
+</style>
